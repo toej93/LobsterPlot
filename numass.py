@@ -1,11 +1,6 @@
 """
 Code written by Jeremy Cushman and updated/documented by Jorge Torres.
 
-Todo:
-    * Document what each function does.
-    * Update sensitivities, etc.
-    * Make sure to add word "Preliminary if using CUORE's unpublished results"
-
 """
 
 from numpy import cos, sin, exp, pi, sqrt, arcsin
