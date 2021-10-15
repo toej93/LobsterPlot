@@ -48,7 +48,7 @@ mbI = np.zeros((N,3))
 sumMN = np.zeros((N,3))
 sumMI = np.zeros((N,3))
 
-N_samples = 50000
+N_samples = 100000
 
 if(int(sys.argv[1]))==0:    
     print("Normal ordering")

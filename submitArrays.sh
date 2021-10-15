@@ -3,7 +3,7 @@
 #SBATCH --job-name=run_Arrays
 #SBATCH --ntasks=2 --nodes=1 --mem-per-cpu 5g --partition scavenge --requeue
 #SBATCH --mail-type=FAIL
-#SBATCH --time=02:35:00
+#SBATCH --time=04:35:00
 #SBATCH --output=logs/Arrays.out    # Standard output and error log
 
 #source /gpfs/loomis/home.grace/jat89/.bash_cuoreMC
