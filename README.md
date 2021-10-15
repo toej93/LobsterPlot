@@ -13,9 +13,10 @@ neutrino mass, with 3-sigma bands showing allowed regions given our knowledge ab
     <br />
 
   </p>
-</div>
+<!-- </div> -->
 
-![Example plot](https://github.com/toej93/LobsterPlot/blob/main/Lobster_example.png)
+![Example plot](https://raw.githubusercontent.com/toej93/LobsterPlot/main/Lobster_example.png)
+
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -52,19 +53,17 @@ You need the following software to be able to run this
 
 1. No installation needed, just clone and run!
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-The functions needed to make plots are contained in the `nu_mass.py` file, along with their docstrings. Examples of some of the different plots that can be made are contained in `lobsterPlot.ipynb`.
+The functions needed to make plots are contained in the `nu_mass.py` file, along with their docstrings. Examples of some of the different plots that can be made are contained in [`lobsterPlot.ipynb`](https://github.com/toej93/LobsterPlot/blob/main/lobsterPlot.ipynb).
 
 
 ### Code to sample parameter space
 
 I am already providing the needed sampled arrays to produce the final plots, but you can produce your own files by running `getArrays.py`. It produces two files: `normalArray.npy` and `invertedArray.npy`, which contain the sampled values as well as the 3-sigma bands.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -79,7 +78,6 @@ If you have a suggestion or correction, please fork the repo and create a pull r
 4. Push to the Branch (`git push origin feature/Feature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- LICENSE -->
@@ -87,7 +85,6 @@ If you have a suggestion or correction, please fork the repo and create a pull r
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -97,9 +94,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Jorge Torres - [@toej93](https://twitter.com/toej93) - jorge.torresespinosa@yale.edu
 
 Project Link: [https://github.com/toej93/LobsterPlot](https://github.com/toej93/LobsterPlot)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- ACKNOWLEDGMENTS -->
