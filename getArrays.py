@@ -11,7 +11,7 @@ if len( sys.argv ) > 1:
     number = int(sys.argv[1])
 
 else:
-    print("Run as $python getArrays.py <NH:0 or IH:1>, for example $python getArrays.py for NH. ")
+    print("Run as $python getArrays.py <NH:0 or IH:1>, for example $python getArrays.py 0 for NH. ")
     sys.exit()
 
 ########################################################################### 
