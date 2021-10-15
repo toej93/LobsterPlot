@@ -15,7 +15,7 @@ neutrino mass, with 3-sigma bands showing allowed regions given our knowledge ab
   </p>
 </div>
 
-![Example](https://raw.githubusercontent.com/toej93/LobsterPlot/main/Lobster_example.png)
+![Example plot](https://raw.githubusercontent.com/toej93/LobsterPlot/main/Lobster_example.png)
 
 
 <!-- TABLE OF CONTENTS -->
@@ -58,7 +58,7 @@ You need the following software to be able to run this
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-The functions needed to make plots are contained in the `nu_mass.py` file, along with their docstrings. Examples of some of the different plots that can be made are contained in `lobsterPlot.ipynb`.
+The functions needed to make plots are contained in the `nu_mass.py` file, along with their docstrings. Examples of some of the different plots that can be made are contained in [`lobsterPlot.ipynb`](https://github.com/toej93/LobsterPlot/blob/main/lobsterPlot.ipynb).
 
 
 ### Code to sample parameter space
