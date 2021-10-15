@@ -11,15 +11,11 @@ neutrino mass, with 3-sigma bands showing allowed regions given our knowledge ab
     <a href="https://github.com/toej93/LobsterPlot"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-<!--     <a href="https://github.com/toej93/LobsterPlot">View Demo</a>
-    ·
-    <a href="https://github.com/toej93/LobsterPlot/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/toej93/LobsterPlot/issues">Request Feature</a> -->
+
   </p>
 </div>
 
-
+![Example plot](https://github.com/toej93/LobsterPlot/blob/main/Lobster_example.png)
 
 <!-- TABLE OF CONTENTS -->
 <details>
