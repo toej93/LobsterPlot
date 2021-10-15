@@ -219,7 +219,7 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
     if(isotopes==None):
         isotopes = ["Xe", "Te", "Ge"]
         
-    ##Te limit from CUORE
+    ##Te limit from CUORE (PRELIMINARY): https://arxiv.org/abs/2104.06906
     
     if("Te" in isotopes):
         mbb_min_Te = 90

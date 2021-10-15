@@ -6,7 +6,7 @@
 
   <p align="center">
     This code contains all the ingredients to make the so-called "Lobster plot", which is the dependence of the parameter m𝛽𝛽 on the presently unknown lightest
-neutrino mass, with 3-sigma bands showing allowed regions given our knowledge about the neutrino mixing parameters.
+neutrino mass, with 3-sigma bands showing allowed regions given our knowledge about the neutrino mixing parameters. The bulk of this code was originally written by fromer Yale grad student Jeremy Cushman, and I updated and documented it, as well as added a couple of other functions.
     <br />
     <a href="https://github.com/toej93/LobsterPlot"><strong>Explore the docs »</strong></a>
     <br />
@@ -64,6 +64,12 @@ The functions needed to make plots are contained in the `nu_mass.py` file, along
 
 I am already providing the needed sampled arrays to produce the final plots, but you can produce your own files by running `getArrays.py`. It produces two files: `normalArray.npy` and `invertedArray.npy`, which contain the sampled values as well as the 3-sigma bands.
 
+### Sources for the included experimental limits:
+
+* Ge limit from GERDA (2020): [Phys. Rev. Lett. 125, 252502](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.252502)
+* Mo limit from CUPID-Mo (2021): [Phys. Rev. Lett. 126, 181802](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.181802)
+* Te limit from CUORE (PRELIMINARY, 2021): [arXiv:2104.06906](https://arxiv.org/abs/2104.06906)
+* Xe limit from KamLand-Zen (2016): [Phys. Rev. Lett. 117, 082503](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.082503)
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -99,7 +105,7 @@ Project Link: [https://github.com/toej93/LobsterPlot](https://github.com/toej93/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* Thanks a lot to Jeremy Cushman for starting the code.
+* Thanks a lot to Jeremy Cushman for writing the bulk of the code.
 * Thanks to the CUORE@Yale folks for reviewing the code.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
