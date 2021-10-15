@@ -64,6 +64,12 @@ The functions needed to make plots are contained in the `nu_mass.py` file, along
 
 I am already providing the needed sampled arrays to produce the final plots, but you can produce your own files by running `getArrays.py`. It produces two files: `normalArray.npy` and `invertedArray.npy`, which contain the sampled values as well as the 3-sigma bands.
 
+### Sources for the included experimental limits:
+
+* Ge limit from GERDA (2020): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.252502
+* Mo limit from CUPID-Mo (2021): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.1
+* Te limit from CUORE (PRELIMINARY, 2021): https://arxiv.org/abs/2104.06906
+* Xe limit from KamLand-Zen (2016): https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.117.082503
 
 <!-- CONTRIBUTING -->
 ## Contributing
