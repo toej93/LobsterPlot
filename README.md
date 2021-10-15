@@ -13,7 +13,7 @@ neutrino mass, with 3-sigma bands showing allowed regions given our knowledge ab
     <br />
 
   </p>
-</div>
+<!-- </div> -->
 
 ![Example plot](https://raw.githubusercontent.com/toej93/LobsterPlot/main/Lobster_example.png)
 
