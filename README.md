@@ -6,7 +6,7 @@
 
   <p align="center">
     This code contains all the ingredients to make the so-called "Lobster plot", which is the dependence of the parameter m𝛽𝛽 on the presently unknown lightest
-neutrino mass, with 3-sigma bands showing allowed regions given our knowledge about the neutrino mixing parameters. This code was originally written by fromer Yale grad student Jeremy Cushman, and I updated and documented it, as well as added a couple of other functions.
+neutrino mass, with 3-sigma bands showing allowed regions given our knowledge about the neutrino mixing parameters. The bulk of this code was originally written by fromer Yale grad student Jeremy Cushman, and I updated and documented it, as well as added a couple of other functions.
     <br />
     <a href="https://github.com/toej93/LobsterPlot"><strong>Explore the docs »</strong></a>
     <br />
