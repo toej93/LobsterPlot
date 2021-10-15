@@ -66,10 +66,10 @@ I am already providing the needed sampled arrays to produce the final plots, but
 
 ### Sources for the included experimental limits:
 
-* Ge limit from GERDA (2020): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.252502
-* Mo limit from CUPID-Mo (2021): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.1
-* Te limit from CUORE (PRELIMINARY, 2021): https://arxiv.org/abs/2104.06906
-* Xe limit from KamLand-Zen (2016): https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.117.082503
+* Ge limit from GERDA (2020): [Phys. Rev. Lett. 125, 252502](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.252502)
+* Mo limit from CUPID-Mo (2021): [Phys. Rev. Lett. 126, 181802](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.181802)
+* Te limit from CUORE (PRELIMINARY, 2021): [arXiv:2104.06906](https://arxiv.org/abs/2104.06906)
+* Xe limit from KamLand-Zen (2016): [Phys. Rev. Lett. 117, 082503](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.082503)
 
 <!-- CONTRIBUTING -->
 ## Contributing
