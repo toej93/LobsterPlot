@@ -23,7 +23,8 @@
 <h3 align="center">Making the "Lobster" Plot</h3>
 
   <p align="center">
-    project_description
+    This code contains all the ingredients to make the so-called "Lobster plot", which is the dependence of the parameter m𝛽𝛽 on the presently unknown lightest
+neutrino mass, with 3-sigma bands showing allowed regions given our knowledge about the neutrino mixing parameters.
     <br />
     <a href="https://github.com/toej93/LobsterPlot"><strong>Explore the docs »</strong></a>
     <br />
@@ -43,12 +44,6 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -56,41 +51,12 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `toej93`, `LobsterPlot`, `toej93`, `jorge.torresespinosa@yale.edu`, `Making the "Lobster Plot`, `project_description`
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-### Built With
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -100,7 +66,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+You need the following software to be able to run this
 * Python 3
 * Jupyter (if you want to use the notebook, otherwise not needed)
 
@@ -110,35 +76,32 @@ This is an example of how to list things you need to use the software and how to
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The functions needed to make plots are contained in the `nu_mass.py` file, along with their docstrings. Examples of some of the different plots that can be made are contained in `lobsterPlot.ipynb`.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+### Code to sample parameter space
+
+I am already providing the needed sampled arrays to produce the final plots, but you can produce your own files by running `getArrays.py`. It produces two files: `normalArray.npy` and `invertedArray.npy`, which contain the sampled values as well as the 3-sigma bands.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+This is an open source code, so please feel free to use it, and modify it, at your convenience. However, any contributions to this code **greatly appreciated**. 
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+If you have a suggestion or correction, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/Feature`)
+3. Commit your Changes (`git commit -m 'Add some Feature'`)
+4. Push to the Branch (`git push origin feature/Feature`)
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
@@ -153,7 +116,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@toej93](https://twitter.com/toej93) - jorge.torresespinosa@yale.edu@email_client.com
+Your Name - [@toej93](https://twitter.com/toej93) - jorge.torresespinosa@yale.edu
 
 Project Link: [https://github.com/toej93/LobsterPlot](https://github.com/toej93/LobsterPlot)
 
@@ -164,9 +127,8 @@ Project Link: [https://github.com/toej93/LobsterPlot](https://github.com/toej93/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* Thanks a lot to Jeremy Cushman for starting the code.
+* Thanks to the CUORE@Yale folks for reviewing the code.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
