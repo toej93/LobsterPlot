@@ -219,7 +219,7 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
     if(isotopes==None):
         isotopes = ["Xe", "Te", "Ge"]
         
-    ##Te limit from CUORE (PRELIMINARY): https://arxiv.org/abs/2104.06906
+    ##Te limit from CUORE (2022): Nature 604, 53–58 (2022). https://doi.org/10.1038/s41586-022-04497-4
     
     if("Te" in isotopes):
         mbb_min_Te = 90
@@ -240,10 +240,10 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
         IH.errorbar(A_Ge, mbb_min_Ge, yerr=mbb_max_Ge-mbb_min_Ge-20, lolims=True,  color=arrColor)
         IH.text(A_Ge+3, mbb_min_Ge, '$^{76}$Ge', color=arrColor,fontsize='medium', ha="left", fontweight="book")
 
-    ##Xe limit from KamLand-Zen (2016): https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.117.082503
+    ##Xe limit from KamLand-Zen (2022): https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.117.082503
     if("Xe" in isotopes):
-        mbb_min_Xe = 61
-        mbb_max_Xe = 165
+        mbb_min_Xe = 36
+        mbb_max_Xe = 156
         A_Xe = 136
         
 #         IH.axhspan(mbb_min_Xe, mbb_max_Xe, xmin = (A_Xe)/axSpan, xmax = (A_Xe+10)/axSpan, lw=0, ec='#AA7F39',fill=None, alpha=0.3, hatch='///')
