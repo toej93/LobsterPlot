@@ -219,7 +219,7 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
     if(isotopes==None):
         isotopes = ["Xe", "Te", "Ge"]
         
-    ##Te limit from CUORE (PRELIMINARY): https://arxiv.org/abs/2104.06906
+    ##Te limit from CUORE (2022): Nature 604, 53–58 (2022). https://doi.org/10.1038/s41586-022-04497-4
     
     if("Te" in isotopes):
         mbb_min_Te = 90
@@ -240,10 +240,10 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
         IH.errorbar(A_Ge, mbb_min_Ge, yerr=mbb_max_Ge-mbb_min_Ge-20, lolims=True,  color=arrColor)
         IH.text(A_Ge+3, mbb_min_Ge, '$^{76}$Ge', color=arrColor,fontsize='medium', ha="left", fontweight="book")
 
-    ##Xe limit from KamLand-Zen (2016): https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.117.082503
+    ##Xe limit from KamLand-Zen (2022): https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.117.082503
     if("Xe" in isotopes):
-        mbb_min_Xe = 61
-        mbb_max_Xe = 165
+        mbb_min_Xe = 36
+        mbb_max_Xe = 156
         A_Xe = 136
         
 #         IH.axhspan(mbb_min_Xe, mbb_max_Xe, xmin = (A_Xe)/axSpan, xmax = (A_Xe+10)/axSpan, lw=0, ec='#AA7F39',fill=None, alpha=0.3, hatch='///')
@@ -251,16 +251,26 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
         IH.errorbar(A_Xe, mbb_min_Xe, yerr=mbb_max_Xe-mbb_min_Xe-20, lolims=True,  color=arrColor)
         IH.text(A_Xe+3, mbb_min_Xe, '$^{136}$Xe', color=arrColor,fontsize='medium', ha="left", fontweight="book")
 
-    ## Mo limit from CUPID-Mo (2021): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.1
+    ## Mo limit from CUPID-Mo (2022): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.1
     if("Mo" in isotopes):
-        mbb_min_Mo = 300
-        mbb_max_Mo = 500
+        mbb_min_Mo = 280
+        mbb_max_Mo = 490
         A_Mo = 100
         
 #         IH.axhspan(mbb_min_Mo, mbb_max_Mo,lw=0, xmin = 100, xmax = 150, ec='#AA7F39',fill=None, alpha=0.3, hatch='///')
         Moline = IH.hlines(mbb_min_Mo, A_Mo-2, A_Mo+2, color=arrColor, label='$^{100}$Mo limit (CUPID-Mo)', linestyle='-')
         IH.errorbar(A_Mo, mbb_min_Mo, yerr=mbb_max_Mo-mbb_min_Mo-20, lolims=True,  color=arrColor)
         IH.text(A_Mo+3, mbb_min_Mo, '$^{100}$Mo', color=arrColor,fontsize='medium', ha="left", fontweight="book")
+        
+     if("Se" in isotopes):
+        mbb_min_Se = 263
+        mbb_max_Se = 545
+        A_Se = 82
+
+## Se limit from CUPID-0 (2022): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.111801
+        Seline = IH.hlines(mbb_min_Se, A_Se-2, A_Se+2, color=arrColor, label='$^{82}$Se limit (CUPID-0)', linestyle='-')
+        IH.errorbar(A_Se, mbb_min_Se, yerr=mbb_max_Se-mbb_min_Se-20, lolims=True,  color='#2B4970')
+        IH.text(A_Se+3, mbb_min_Se, '$^{82}$Se', color=arrColor,fontsize=isotope_fontsize, ha="left", fontweight="book")
 
 
     ##
