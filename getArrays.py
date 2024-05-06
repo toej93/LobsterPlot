@@ -17,16 +17,16 @@ else:
 ########################################################################### 
 ###  best fit values,       best fit - 3sigma,   best fit + 3sigma      ###
 ########################################################################### 
-## Values from Three-neutrino fit based on data available in July 2020: JHEP09(2020)178 (Table with SK athmospheric data) ##
+## Values from Three-neutrino fit based on data available from NuFIT 5.3 (2024): JHEP09(2020)178 (Table with SK athmospheric data) ##
 
-T12 = [arcsin(sqrt(0.304)), arcsin(sqrt(0.269)), arcsin(sqrt(0.343))]
-T13_N = [arcsin(sqrt(0.02219)), arcsin(sqrt(0.02032)), arcsin(sqrt(0.02410))]
-T13_I = [arcsin(sqrt(0.02238)), arcsin(sqrt(0.02052)), arcsin(sqrt(0.02428))] 
+T12 = [arcsin(sqrt(0.307)), arcsin(sqrt(0.275)), arcsin(sqrt(0.344))]
+T13_N = [arcsin(sqrt(0.02224)), arcsin(sqrt(0.02047)), arcsin(sqrt(0.02397))]
+T13_I = [arcsin(sqrt(0.02222)), arcsin(sqrt(0.02049)), arcsin(sqrt(0.02420))] 
 ## all in meV**2
-dM2_12 = [7.42E1, 6.82E1, 8.04E1]
-dM2_N = [2.517E3, 2.435E3, 2.598E3]
+dM2_12 = [7.41E1, 6.81E1, 8.03E1]
+dM2_N = [2.505E3, 2.426E3, 2.586E3]
 dM2_13_N = [i+0.5*j for i,j in zip(dM2_N, dM2_12)]
-dM2_I = [2.498E3, 2.414E3, 2.581E3]
+dM2_I = [2.487E3, 2.566E3, 2.407E3]
 dM2_13_I = [i-0.5*j for i,j in zip(dM2_I, dM2_12)]
 
 ########### STERILE Neutrino Mixing ##########

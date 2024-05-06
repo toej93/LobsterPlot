@@ -14,7 +14,7 @@ def nuM_range(m,hiearchy,includeSterile, p12, p13, p14, nSamples = 1000):
 
     """
     This function calculates the effective Majorana mass,
-    bete decay kinetic mass, and sum mass of all neutrino flavors
+    beta decay kinetic mass, and sum mass of all neutrino flavors
     given the lightest neutrino mass.
     The calculation depends on the hiearchy specified (IH, or NH)
     and can possibly include the simple 3+1 sterile neutrino model if desired.
@@ -219,14 +219,25 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
     if(isotopes==None):
         isotopes = ["Xe", "Te", "Ge"]
         
-    ##Te limit from CUORE (2022): Nature 604, 53–58 (2022). https://doi.org/10.1038/s41586-022-04497-4
+#     ##Te limit from CUORE (2022): Nature 604, 53–58 (2022). https://doi.org/10.1038/s41586-022-04497-4
+    
+#     if("Te" in isotopes):
+#         mbb_min_Te = 90
+#         mbb_max_Te = 305
+#         A_Te = 130
+# #         IH.axhspan(mbb_min_Te, mbb_max_Te, xmin = (A_Te)/axSpan, xmax = (A_Te)/axSpan, lw=0,fc=arrColor,ec=arrColor, alpha=0.3)
+#         Teline = IH.hlines(mbb_min_Te, A_Te-2, A_Te+2, color=arrColor, label='$^{130}$Te limit (CUORE [Prelim.])')
+#         IH.errorbar(A_Te, mbb_min_Te,yerr = mbb_max_Te-mbb_min_Te-20, lolims=True,  color=arrColor)
+#         IH.text(A_Te-5, mbb_min_Te, '$^{130}$Te', color=arrColor,fontsize='medium', ha="right", fontweight="book")
+
+        ##Te limit from CUORE 1st+2ndTY (TAUP 2023):
     
     if("Te" in isotopes):
-        mbb_min_Te = 90
-        mbb_max_Te = 305
+        mbb_min_Te = 75
+        mbb_max_Te = 255
         A_Te = 130
 #         IH.axhspan(mbb_min_Te, mbb_max_Te, xmin = (A_Te)/axSpan, xmax = (A_Te)/axSpan, lw=0,fc=arrColor,ec=arrColor, alpha=0.3)
-        Teline = IH.hlines(mbb_min_Te, A_Te-2, A_Te+2, color=arrColor, label='$^{130}$Te limit (CUORE [Prelim.])')
+        Teline = IH.hlines(mbb_min_Te, A_Te-2, A_Te+2, color=arrColor, label='$^{130}$Te limit (CUORE [TAUP 2023])')
         IH.errorbar(A_Te, mbb_min_Te,yerr = mbb_max_Te-mbb_min_Te-20, lolims=True,  color=arrColor)
         IH.text(A_Te-5, mbb_min_Te, '$^{130}$Te', color=arrColor,fontsize='medium', ha="right", fontweight="book")
 
@@ -262,7 +273,7 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
         IH.errorbar(A_Mo, mbb_min_Mo, yerr=mbb_max_Mo-mbb_min_Mo-20, lolims=True,  color=arrColor)
         IH.text(A_Mo+3, mbb_min_Mo, '$^{100}$Mo', color=arrColor,fontsize='medium', ha="left", fontweight="book")
         
-     if("Se" in isotopes):
+    if("Se" in isotopes):
         mbb_min_Se = 263
         mbb_max_Se = 545
         A_Se = 82
@@ -270,7 +281,7 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
 ## Se limit from CUPID-0 (2022): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.111801
         Seline = IH.hlines(mbb_min_Se, A_Se-2, A_Se+2, color=arrColor, label='$^{82}$Se limit (CUPID-0)', linestyle='-')
         IH.errorbar(A_Se, mbb_min_Se, yerr=mbb_max_Se-mbb_min_Se-20, lolims=True,  color='#2B4970')
-        IH.text(A_Se+3, mbb_min_Se, '$^{82}$Se', color=arrColor,fontsize=isotope_fontsize, ha="left", fontweight="book")
+        IH.text(A_Se-2, mbb_min_Se*0.7, '$^{82}$Se', color=arrColor,fontsize='medium', ha="left", fontweight="book")
 
 
     ##
@@ -309,6 +320,8 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
         IH.set_ylim(yMin, yMax)
     else:
         IH.set_ylim(xMin, xMax)
+
+
 
 
 def massContour(ax, xArray, y4DArray, col, xlab, ylab=''):
@@ -381,6 +394,34 @@ def addSensitivity(ax, sens_mbb_min, sens_mbb_max, xMin, experiment_name = "Expe
         
     arrowXscale = 1.2
     ax.axhspan(sens_mbb_min, sens_mbb_max,lw=0, color = color,fc=color,ec=color, alpha=0.1, hatch = "\\")
-    ax.annotate(s='', xy=(1,sens_mbb_min), xytext=(1,sens_mbb_max), arrowprops=dict(arrowstyle='<-', color=color))
+    ax.annotate('', xy=(1,sens_mbb_min), xytext=(1,sens_mbb_max), arrowprops=dict(arrowstyle='<-', color=color))
     ax.text(xMin*(pow(arrowXscale,2)), sens_mbb_min*1.2, experiment_name, color=color,fontsize='large')
-    
+
+
+def addCosmologicalLimit(ax, cosmo_ml_max, xMax, label_name = "Cosmological Limit", color = "C5", hatch = "\\"):
+    """
+    This function adds a band corresponding to cosmological limits on ml value [como_ml_max, +inf] for a given experiment.
+
+    Parameters
+    ----------
+    ax : axes object
+        matplotlib object where plot will be drawn.
+        
+    cosmo_ml_max : float_like
+        The cosmological limit on ml
+
+    label_name : string
+        Label writen on the band.
+
+    col : string
+        choose a color based on matplotlib color palettes: https://matplotlib.org/stable/gallery/color/named_colors.html
+
+    Returns
+    -------
+    plot object
+        It returns a plot object with a band for cosmological limit on ml.
+    """
+    arrowXscale = 1.2
+    ax.axvspan(cosmo_ml_max, xMax, lw=0, color = color, fc=color, ec=color, alpha=0.1, hatch = "//")
+    ax.text(cosmo_ml_max*(pow(arrowXscale,2)), .5, label_name, color=color,fontsize='large', rotation='vertical')
+
