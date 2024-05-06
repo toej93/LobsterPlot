@@ -14,7 +14,7 @@ def nuM_range(m,hiearchy,includeSterile, p12, p13, p14, nSamples = 1000):
 
     """
     This function calculates the effective Majorana mass,
-    bete decay kinetic mass, and sum mass of all neutrino flavors
+    beta decay kinetic mass, and sum mass of all neutrino flavors
     given the lightest neutrino mass.
     The calculation depends on the hiearchy specified (IH, or NH)
     and can possibly include the simple 3+1 sterile neutrino model if desired.
@@ -322,6 +322,8 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
         IH.set_ylim(xMin, xMax)
 
 
+
+
 def massContour(ax, xArray, y4DArray, col, xlab, ylab=''):
     """
     This function makes the "Lobster plot"
@@ -394,4 +396,32 @@ def addSensitivity(ax, sens_mbb_min, sens_mbb_max, xMin, experiment_name = "Expe
     ax.axhspan(sens_mbb_min, sens_mbb_max,lw=0, color = color,fc=color,ec=color, alpha=0.1, hatch = "\\")
     ax.annotate('', xy=(1,sens_mbb_min), xytext=(1,sens_mbb_max), arrowprops=dict(arrowstyle='<-', color=color))
     ax.text(xMin*(pow(arrowXscale,2)), sens_mbb_min*1.2, experiment_name, color=color,fontsize='large')
-    
+
+
+def addCosmologicalLimit(ax, cosmo_ml_max, xMax, label_name = "Cosmological Limit", color = "C5", hatch = "\\"):
+    """
+    This function adds a band corresponding to cosmological limits on ml value [como_ml_max, +inf] for a given experiment.
+
+    Parameters
+    ----------
+    ax : axes object
+        matplotlib object where plot will be drawn.
+        
+    cosmo_ml_max : float_like
+        The cosmological limit on ml
+
+    label_name : string
+        Label writen on the band.
+
+    col : string
+        choose a color based on matplotlib color palettes: https://matplotlib.org/stable/gallery/color/named_colors.html
+
+    Returns
+    -------
+    plot object
+        It returns a plot object with a band for cosmological limit on ml.
+    """
+    arrowXscale = 1.2
+    ax.axvspan(cosmo_ml_max, xMax, lw=0, color = color, fc=color, ec=color, alpha=0.1, hatch = "//")
+    ax.text(cosmo_ml_max*(pow(arrowXscale,2)), .5, label_name, color=color,fontsize='large', rotation='vertical')
+
