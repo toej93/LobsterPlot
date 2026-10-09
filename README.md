@@ -65,7 +65,7 @@ I am already providing the needed sampled arrays to produce the final plots, but
 * Ge limit from GERDA (2020): [Phys. Rev. Lett. 125, 252502](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.252502)
 * Mo limit from CUPID-Mo (2021): [Phys. Rev. Lett. 126, 181802](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.181802)
 * Te limit from CUORE (2025): [Science390,1029-1032(2025)](https://doi.org/10.1126/science.adp6474)
-* Xe limit from KamLand-Zen (2022): [Phys.Rev.Lett. 135 (2025) 26, 262501](https://doi.org/10.1103/jkf6-48j8)
+* Xe limit from KamLand-Zen (2025): [Phys.Rev.Lett. 135 (2025) 26, 262501](https://doi.org/10.1103/jkf6-48j8)
 
 <!-- CONTRIBUTING -->
 ## Contributing
