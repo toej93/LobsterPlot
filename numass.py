@@ -219,22 +219,11 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
     if(isotopes==None):
         isotopes = ["Xe", "Te", "Ge"]
         
-#     ##Te limit from CUORE (2022): Nature 604, 53–58 (2022). https://doi.org/10.1038/s41586-022-04497-4
-    
-#     if("Te" in isotopes):
-#         mbb_min_Te = 90
-#         mbb_max_Te = 305
-#         A_Te = 130
-# #         IH.axhspan(mbb_min_Te, mbb_max_Te, xmin = (A_Te)/axSpan, xmax = (A_Te)/axSpan, lw=0,fc=arrColor,ec=arrColor, alpha=0.3)
-#         Teline = IH.hlines(mbb_min_Te, A_Te-2, A_Te+2, color=arrColor, label='$^{130}$Te limit (CUORE [Prelim.])')
-#         IH.errorbar(A_Te, mbb_min_Te,yerr = mbb_max_Te-mbb_min_Te-20, lolims=True,  color=arrColor)
-#         IH.text(A_Te-5, mbb_min_Te, '$^{130}$Te', color=arrColor,fontsize='medium', ha="right", fontweight="book")
-
-        ##Te limit from CUORE 1st+2ndTY (TAUP 2023):
+#     ##Te limit from CUORE (2025): Science390,1029-1032(2025).DOI:10.1126/science.adp6474
     
     if("Te" in isotopes):
-        mbb_min_Te = 75
-        mbb_max_Te = 255
+        mbb_min_Te = 70
+        mbb_max_Te = 250
         A_Te = 130
 #         IH.axhspan(mbb_min_Te, mbb_max_Te, xmin = (A_Te)/axSpan, xmax = (A_Te)/axSpan, lw=0,fc=arrColor,ec=arrColor, alpha=0.3)
         Teline = IH.hlines(mbb_min_Te, A_Te-2, A_Te+2, color=arrColor, label='$^{130}$Te limit (CUORE [TAUP 2023])')
@@ -251,10 +240,10 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
         IH.errorbar(A_Ge, mbb_min_Ge, yerr=mbb_max_Ge-mbb_min_Ge-20, lolims=True,  color=arrColor)
         IH.text(A_Ge+3, mbb_min_Ge, '$^{76}$Ge', color=arrColor,fontsize='medium', ha="left", fontweight="book")
 
-    ##Xe limit from KamLand-Zen (2022): https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.117.082503
+    ##Xe limit from KamLand-Zen (2025): Phys.Rev.Lett. 135 (2025) 26, 262501 (DOI: 10.1103/jkf6-48j8 )
     if("Xe" in isotopes):
-        mbb_min_Xe = 36
-        mbb_max_Xe = 156
+        mbb_min_Xe = 28
+        mbb_max_Xe = 122
         A_Xe = 136
         
 #         IH.axhspan(mbb_min_Xe, mbb_max_Xe, xmin = (A_Xe)/axSpan, xmax = (A_Xe+10)/axSpan, lw=0, ec='#AA7F39',fill=None, alpha=0.3, hatch='///')
