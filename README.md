@@ -6,7 +6,7 @@
 
   <p align="center">
     This code contains all the ingredients to make the so-called "Lobster plot", which is the dependence of the parameter m𝛽𝛽 on the presently unknown lightest
-neutrino mass, with 3-sigma bands showing allowed regions given our knowledge about the neutrino mixing parameters. The bulk of this code was originally written by fromer Yale grad student Jeremy Cushman, and I updated and documented it, as well as added a couple of other functions.
+neutrino mass, with 3-sigma bands showing allowed regions given our knowledge about the neutrino mixing parameters. The bulk of this code was originally written by fromer Yale grad student Jeremy Cushman.
     <br />
     <a href="https://github.com/toej93/LobsterPlot"><strong>Explore the docs »</strong></a>
     <br />
@@ -54,19 +54,18 @@ You need the following software to be able to run this
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-The functions needed to make plots are contained in the `nu_mass.py` file, along with their docstrings. Examples of some of the different plots that can be made are contained in [`lobsterPlot.ipynb`](https://github.com/toej93/LobsterPlot/blob/main/lobsterPlot.ipynb).
-
+The functions needed to make plots are contained in the `nu_mass.py` file, along with their docstrings. Examples of some of the different plots that can be made are contained in [`lobsterPlot.ipynb`](./lobsterPlot.ipynb).
 
 ### Code to sample parameter space
 
-I am already providing the needed sampled arrays to produce the final plots, but you can produce your own files by running `getArrays.py`. It produces two files: `normalArray.npy` and `invertedArray.npy`, which contain the sampled values as well as the 3-sigma bands.
+I am already providing the needed sampled arrays to produce the final plots, but you can produce your own files by running `getArrays.py`. It produces two files: `normalArray.npy` and `invertedArray.npy`.
 
 ### Sources for the included experimental limits:
 
 * Ge limit from GERDA (2020): [Phys. Rev. Lett. 125, 252502](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.252502)
 * Mo limit from CUPID-Mo (2021): [Phys. Rev. Lett. 126, 181802](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.181802)
-* Te limit from CUORE (2025): [Science390,1029-1032(2025)]((https://doi.org/10.1126/science.adp6474))
-* Xe limit from KamLand-Zen (2022): [Phys.Rev.Lett. 135 (2025) 26, 262501]((https://doi.org/10.1103/jkf6-48j8))
+* Te limit from CUORE (2025): [Science390,1029-1032(2025)](https://doi.org/10.1126/science.adp6474)
+* Xe limit from KamLand-Zen (2022): [Phys.Rev.Lett. 135 (2025) 26, 262501](https://doi.org/10.1103/jkf6-48j8)
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -86,7 +85,7 @@ If you have a suggestion or correction, please fork the repo and create a pull r
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [`LICENSE.txt`](./LICENSE.txt) for more information.
 
 
 
@@ -112,5 +111,5 @@ Project Link: [https://github.com/toej93/LobsterPlot](https://github.com/toej93/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/toej93/LobsterPlot/blob/main/LICENSE
+[license-shield]: https://img.shields.io/github/license/toej93/LobsterPlot.svg?style=for-the-badge
+[license-url]: ./LICENSE
