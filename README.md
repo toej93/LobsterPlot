@@ -94,7 +94,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Jorge Torres - [@toej93](https://twitter.com/toej93) - jorge.torresespinosa@yale.edu
+Jorge Torres - [@toej93](https://twitter.com/toej93) - jorge.torres@utah.edu
 
 Project Link: [https://github.com/toej93/LobsterPlot](https://github.com/toej93/LobsterPlot)
 
