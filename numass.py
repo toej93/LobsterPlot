@@ -219,14 +219,14 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
     if(isotopes==None):
         isotopes = ["Xe", "Te", "Ge"]
         
-#     ##Te limit from CUORE (2025): Science390,1029-1032(2025).DOI:10.1126/science.adp6474
+    ## Te limit from CUORE (2025): Science 390, 1029-1032. DOI:10.1126/science.adp6474
     
     if("Te" in isotopes):
         mbb_min_Te = 70
         mbb_max_Te = 250
         A_Te = 130
 #         IH.axhspan(mbb_min_Te, mbb_max_Te, xmin = (A_Te)/axSpan, xmax = (A_Te)/axSpan, lw=0,fc=arrColor,ec=arrColor, alpha=0.3)
-        Teline = IH.hlines(mbb_min_Te, A_Te-2, A_Te+2, color=arrColor, label='$^{130}$Te limit (CUORE [TAUP 2023])')
+        Teline = IH.hlines(mbb_min_Te, A_Te-2, A_Te+2, color=arrColor, label='$^{130}$Te limit (CUORE 2025)')
         IH.errorbar(A_Te, mbb_min_Te,yerr = mbb_max_Te-mbb_min_Te-20, lolims=True,  color=arrColor)
         IH.text(A_Te-5, mbb_min_Te, '$^{130}$Te', color=arrColor,fontsize='medium', ha="right", fontweight="book")
 
@@ -240,18 +240,18 @@ def AddExperimentalLimits(IH, NH, xMin, xMax, isotopes=None, yMin=-1, yMax=-1):
         IH.errorbar(A_Ge, mbb_min_Ge, yerr=mbb_max_Ge-mbb_min_Ge-20, lolims=True,  color=arrColor)
         IH.text(A_Ge+3, mbb_min_Ge, '$^{76}$Ge', color=arrColor,fontsize='medium', ha="left", fontweight="book")
 
-    ##Xe limit from KamLand-Zen (2025): Phys.Rev.Lett. 135 (2025) 26, 262501 (DOI: 10.1103/jkf6-48j8 )
+    ## Xe limit from KamLAND-Zen (2025): Phys. Rev. Lett. 135, 262501. DOI:10.1103/jkf6-48j8
     if("Xe" in isotopes):
         mbb_min_Xe = 28
         mbb_max_Xe = 122
         A_Xe = 136
         
 #         IH.axhspan(mbb_min_Xe, mbb_max_Xe, xmin = (A_Xe)/axSpan, xmax = (A_Xe+10)/axSpan, lw=0, ec='#AA7F39',fill=None, alpha=0.3, hatch='///')
-        Xeline = IH.hlines(mbb_min_Xe, A_Xe-2, A_Xe+2, color=arrColor, label='$^{136}$Xe limit (KamLAND-Zen)', linestyle='-')
+        Xeline = IH.hlines(mbb_min_Xe, A_Xe-2, A_Xe+2, color=arrColor, label='$^{136}$Xe limit (KamLAND-Zen 2025)', linestyle='-')
         IH.errorbar(A_Xe, mbb_min_Xe, yerr=mbb_max_Xe-mbb_min_Xe-20, lolims=True,  color=arrColor)
         IH.text(A_Xe+3, mbb_min_Xe, '$^{136}$Xe', color=arrColor,fontsize='medium', ha="left", fontweight="book")
 
-    ## Mo limit from CUPID-Mo (2022): https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.1
+    ## Mo limit from CUPID-Mo (2021): Phys. Rev. Lett. 126, 181802. DOI:10.1103/PhysRevLett.126.181802
     if("Mo" in isotopes):
         mbb_min_Mo = 280
         mbb_max_Mo = 490
@@ -413,4 +413,3 @@ def addCosmologicalLimit(ax, cosmo_ml_max, xMax, label_name = "Cosmological Limi
     arrowXscale = 1.2
     ax.axvspan(cosmo_ml_max, xMax, lw=0, color = color, fc=color, ec=color, alpha=0.1, hatch = "//")
     ax.text(cosmo_ml_max*(pow(arrowXscale,2)), .5, label_name, color=color,fontsize='large', rotation='vertical')
-
